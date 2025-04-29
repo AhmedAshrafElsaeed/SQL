@@ -1,0 +1,96 @@
+1-
+# Write your MySQL query statement below
+select product_id from Products 
+where low_fats = 'Y' and recyclable = 'Y'
+--------------------------------------------------------------------------------------------------------------
+2-
+# Write your MySQL query statement below
+select name from Customer 
+where referee_id != 2 || referee_id is null
+---------------------------------------------------------------------------------
+3-
+# Write your MySQL query statement below
+select name, population , area from World
+where area >= 3000000 || population >= 25000000
+---------------------------------------------------------------------------------
+4-
+# Write your MySQL query statement below
+select distinct author_id as id from Views
+ where author_id = viewer_id 
+ order by author_id asc
+---------------------------------------------------------------------------------
+5-
+# Write your MySQL query statement below
+select tweet_id from Tweets
+where LENGTH(content) > 15
+---------------------------------------------------------------------------------
+6-
+# Write your MySQL query statement below
+select unique_id , name 
+from Employees e left join EmployeeUNI ei
+on e.id = ei.id
+---------------------------------------------------------------------------------
+7-
+# Write your MySQL query statement below
+select product_name,year,price
+from Product p join Sales s
+on s.product_id = p.product_id  
+---------------------------------------------------------------------------------
+8-
+select customer_id , count(*) as count_no_trans
+FROM Visits v
+left join transactions t ON v.visit_id = t.visit_id
+where t.visit_id is null
+group by customer_id
+---------------------------------------------------------------------------------
+9-
+select w1.id from 
+Weather w1 join weather w2
+on datediff(w1.recorddate , w2.recorddate) = 1
+where w1.temperature > w2.temperature   
+---------------------------------------------------------------------------------
+10-
+select e.name  , b.bonus 
+from 
+Employee e left join bonus b
+on e.empId = b.empId
+where b.bonus is null or b.bonus < 1000; 
+
+---------------------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+---------------------------------------------------------------------------------
+
+
+
+
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
